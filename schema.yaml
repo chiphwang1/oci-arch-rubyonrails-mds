@@ -124,22 +124,12 @@ variables:
 
   use_bastion_service:
     type: boolean
-    visibile: true
-    default: false
+    visibile: false
+    default: true
     required: false
     title: "Use OCI Bastion Service"
     description: "Check the box to use OCI Bastion Service instead of Bastion Host VM."
 
-  ruby_version:
-    type: enum
-    title: "Ruby Version"
-    description: "Choose Ruby Version"
-    default: "3.0.1"
-    required: false 
-    enum:
-      - "3.0.1"
-      - "3.0.0"
-      - "2.7.4"
 
   mysql_is_highly_available:
     type: boolean
@@ -156,7 +146,7 @@ variables:
     description: "Type MySQL Database System (MDS) Admin Password"
     minLength: 9
     maxLength: 30
-    pattern: ^[A-Za-z][A-Za-z0-9_#\$]+$ 
+    pattern: 
  
   # Optional Configuration  
   
